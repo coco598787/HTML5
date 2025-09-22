@@ -7,13 +7,14 @@
 <body>
     <form action="#" method="post" novalidate>
         <label>身分證字號</label>
-        <input type="text" name="id" pattern="[A-Za-z][0-9]{9}"/>
+        <input type="text" id="id" name="id" pattern="[A-Za-z][0-9]{9}"/>
         <button type="submit">Submit</button>
     </form>
     <script>
         var form = document.querySelector("form");
+        var id=document.getElementById("id");
         form.addEventListener("submit",function(event){
-            alert("submit");
+            // alert("submit");
         });
     </script>
 </body>

@@ -5,10 +5,16 @@
     <title>身分證字號 - 驗證</title>
 </head>
 <body>
-    <form action="#" method="post">
+    <form action="#" method="post" novalidate>
         <label>身分證字號</label>
         <input type="text" name="id" pattern="[A-Za-z][0-9]{9}"/>
         <button type="submit">Submit</button>
     </form>
+    <script>
+        var form = document.querySelector("form");
+        form.addEventListener("submit",function(event){
+            alert("submit");
+        });
+    </script>
 </body>
 </html>

@@ -15,8 +15,8 @@
         var id=document.getElementById("id");
         form.addEventListener("submit",function(event){
             // alert("submit");
-            if(id.validity.valMissing==true){
-                id.setCustomValidity("id未填寫");
+            if(id.validity.patternMismatch==true){
+                id.setCustomValidity("id格是不正確");
             }
         });
     </script>

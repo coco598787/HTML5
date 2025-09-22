@@ -17,6 +17,7 @@
             // alert("submit");
             if(id.validity.patternMismatch==true){
                 id.setCustomValidity("id格是不正確");
+                event.preventDefault(); //停用用設功能，才不會做submit
             }
         });
     </script>

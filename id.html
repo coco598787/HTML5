@@ -17,7 +17,7 @@
             // alert("submit");
             if(id.validity.patternMismatch==true){
                 id.setCustomValidity("id格是不正確");
-                id.reportValidity();
+                id.reportValidity();    //顯示錯誤訊息
                 event.preventDefault(); //停用預設功能，才不會做submit
             }
         });

@@ -15,7 +15,7 @@
             "images/a03.png",
         ];
 
-        //preload
+        //preload  這是JQuery寫法
         var preloadedImages = imageUrls.map(url=>{
             var img = new Image();
             img.src = url;  //開始載入圖片
@@ -24,6 +24,7 @@
 
         var i=0;
         document.getElementById("img").src = preloadedImages[i].src;
+
     </script>
 </body>
 </html>

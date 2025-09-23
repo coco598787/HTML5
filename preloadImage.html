@@ -23,9 +23,13 @@
         });
 
         var i=0;
-        document.getElementById("img").src = preloadedImages[i].src;
+        var target=document.querySelector("#img");
+        target.src = preloadedImages[i].src;
 
-        document.querySelector("#img").addEventListener("click",()=>{});
+        document.querySelector("#img").addEventListener("click",()=>{
+            i=i+1;
+
+        });
 
     </script>
 </body>

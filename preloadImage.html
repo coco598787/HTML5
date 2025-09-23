@@ -26,9 +26,9 @@
         var target=document.querySelector("#img");
         target.src = preloadedImages[i].src;
 
-        document.querySelector("#img").addEventListener("click",()=>{
+        target.addEventListener("click",()=>{
             i=i+1;
-
+            target.src = preloadedImages[i % preloadedImages.length].src;   //用餘數來取得圖片
         });
 
     </script>

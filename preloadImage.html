@@ -15,7 +15,12 @@
             "images/a03.png",
         ];
 
-        imageUrls.map();
+        //preload
+        var preloadedImages = imageUrls.map(url=>{
+            var img = new Image();
+            img.src = url;  //開始載入圖片
+            return img; //載入完成，回傳Image物件
+        });
     </script>
 </body>
 </html>

@@ -13,6 +13,7 @@
                 <input id="name" name="name" class="form-control" placeholder=""/>
                 <label class="form-label">姓名</label>
             </div>
+
             <fieldset class="mb-3"> <!-- 這個name 送到Server會變成陣列 -->
                 <legend >性別</legend>
                 <div class="form-check">
@@ -24,11 +25,19 @@
                     <label class="form-check-label">女</label>
                 </div>                
             </fieldset>
-            <div class="mb-3">
-                <label class="form-label">專長</label>
-                <input id="HTML" type="checkbox" name="skills" class="form-checkbox" value="HTML"/>HTML
-                <input id="JavaScript" type="checkbox" name="skills"  value="JavaScript"/>JavaScript
-            </div>
+
+            <fieldset class="mb-3">
+                <legend>專長</legend>
+                <div class="form-check">
+                    <input id="HTML" type="checkbox" name="skills" class="form-check-input" value="HTML"/>
+                    <label class="form-check-label">HTML</label>
+                </div>
+                <div class="form-check">
+                    <input id="JavaScript" type="checkbox" name="skills" class="form-check-input" value="JavaScript"/>
+                    <label class="form-check-label">JavaScript</label>
+                </div>
+            </fieldset>
+
             <div class="mb-3">
                 <button type="submit" class="btn btn-primary">Submit</button>
             </div>

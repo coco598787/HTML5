@@ -49,6 +49,8 @@
             // alert("unloading");
             var name=document.getElementById("name").value;     //先把name抓出來
             window.localStorage.setItem("name",name);  //寫入LocalStorage
+
+            var male = document.getElementById("male");
         });
         //讀取
         window.addEventListener("load",function(e){ //讀取LocalStorage

@@ -66,9 +66,13 @@
             if(window.localStorage.name){
                 document.getElementById("name").value=window.localStorage.getItem("name"); //讀取name               
             }
-            if(window.localStorage.male){
+            if(window.localStorage.gender){
                 var gender=window.localStorage.getItem("gender");
-                document.querySelectorAll
+                document.querySelectorAll('input[type=radio]').forEach(radio=>{
+                    if(radio.value==gender){
+                        radio.checked=true;
+                    }
+                });
             }
         });
     </script>

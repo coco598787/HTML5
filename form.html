@@ -65,7 +65,9 @@
             // if(window.localStorage.key["name"]){  //如果有name這個key
             if(window.localStorage.name){
                 document.getElementById("name").value=window.localStorage.getItem("name"); //讀取name               
-                
+            }
+            if(window.localStorage.male){
+                var gender=window.localStorage.getItem("gender");
             }
         });
     </script>

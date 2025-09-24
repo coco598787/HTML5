@@ -52,11 +52,11 @@
 
             var male = document.getElementById("male"); //抓男 (id)
             if(male.checked){
-                window.localStorage.setItem("gender","male");
+                window.localStorage.setItem("gender","male");   //男
             }
             else
             {
-                window.localStorage.setItem("gender","female");
+                window.localStorage.setItem("gender","female");  //女
             }
         });
         //讀取
@@ -68,9 +68,9 @@
             }
             if(window.localStorage.gender){
                 var gender=window.localStorage.getItem("gender");
-                document.querySelectorAll('input[type=radio]').forEach(radio=>{
-                    if(radio.value==gender){
-                        radio.checked=true;
+                document.querySelectorAll('input[type=radio]').forEach(radio=>{ //抓所有的radio
+                    if(radio.value==gender){    
+                        radio.checked=true; 
                     }
                 });
             }

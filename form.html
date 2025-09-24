@@ -50,7 +50,7 @@
             var name=document.getElementById("name").value;     //先把name抓出來
             window.localStorage.setItem("name",name);  //寫入LocalStorage
 
-            var male = document.getElementById("male"); //抓男 (id)
+            var male = document.getElementById("male"); //抓性別 (id)
             if(male.checked){
                 window.localStorage.setItem("gender","male");   //男
             }
@@ -82,6 +82,7 @@
             if(window.localStorage.name){
                 document.getElementById("name").value=window.localStorage.getItem("name"); //讀取name               
             }
+
             if(window.localStorage.gender){
                 var gender=window.localStorage.getItem("gender");
                 document.querySelectorAll('input[type=radio]').forEach(radio=>{ //抓所有的radio
@@ -89,6 +90,15 @@
                         radio.checked=true; 
                     }
                 });
+            }
+
+            if(window.localStorage.HTML){
+                var html=window.localStorage.getItem("HTML"); //"true" or "false"
+                document.getElementById("HTML").checked=html=="true" ? true : false; //轉boolean
+            }
+            if(window.localStorage.JavaScript){
+                var javaScript=window.localStorage.getItem("JavaScript"); //"true" or "false"
+                document.getElementById("JavaScript").checked=javaScript=="true" ? true : false; //轉boolean
             }
         });
     </script>

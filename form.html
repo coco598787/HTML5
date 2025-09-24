@@ -29,7 +29,14 @@
         </div>
     </form>
     <script>
-        window.addEventListener("beforeunload",function(){});
+        //讀取
+        window.addEventListener("beforeunload",function(e){ //寫入LocalStorage
+            alert("unloading");
+        });
+        //載入
+        window.addEventListener("load",function(e){ //寫入LocalStorage
+            alert("load");
+        });
     </script>
 </body>
 </html>

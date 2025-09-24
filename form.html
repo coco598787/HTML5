@@ -53,7 +53,8 @@
         //讀取
         window.addEventListener("load",function(e){ //讀取LocalStorage
             // alert("load");
-            if(window.localStorage.name){  //如果有name這個key
+            // if(window.localStorage.key["name"]){  //如果有name這個key
+            if(window.localStorage.name){
                 document.getElementById("name").value=window.localStorage.getItem("name"); //讀取name               
                 
             }

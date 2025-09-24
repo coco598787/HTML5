@@ -47,11 +47,16 @@
         //載入
         window.addEventListener("beforeunload",function(e){ //寫入LocalStorage
             // alert("unloading");
-            var name=document.getElementById("#name").value;     //先把name抓出來
+            var name=document.getElementById("name").value;     //先把name抓出來
+            window.localStorage.setItem("name",name);  //寫入LocalStorage
         });
         //讀取
         window.addEventListener("load",function(e){ //讀取LocalStorage
             // alert("load");
+            if(window.localStorage.key["name"]){  //如果有name這個key
+                document.getElementById("name").value=window.localStorage.getItem("name"); //讀取name               
+                
+            }
         });
     </script>
 </body>

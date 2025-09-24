@@ -44,7 +44,7 @@
         </div>
     </form>
     <script>
-        //載入
+        //載入/寫入
         window.addEventListener("beforeunload",function(e){ //寫入LocalStorage
             // alert("unloading");
             var name=document.getElementById("name").value;     //先把name抓出來
@@ -57,6 +57,22 @@
             else
             {
                 window.localStorage.setItem("gender","female");  //女
+            }
+
+            var html=document.getElementById("HTML");
+            //有選到存值，沒選到就算了
+            if(html.checked){
+                window.localStorage.setItem("HTML",true);   //"true" 它是是字串
+            }
+            else{
+                window.localStorage.setItem("HTML",false); //"false"
+            }
+            var javaScript=document.getElementById("JavaScript");
+            if(javaScript.checked){
+                window.localStorage.setItem("JavaScript",true);   //"true" 
+            }
+            else{
+                window.localStorage.setItem("JavaScript",false); //"false"
             }
         });
         //讀取
